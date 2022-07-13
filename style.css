@@ -1,0 +1,142 @@
+:root{ 
+--bgColor: #eceff1;
+--whiteColor:#fff; 
+--primaryColor:#aa00ff;
+--grayColor:#263238; 
+
+--fontSize: 16px; 
+--borderRadius: 0.2em;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--fontSize);
+    color: var(--grayColor);
+    background-color: var(--bgColor);
+  }
+
+.wrapperAll{
+    margin:0 1.5em ;
+}
+
+  
+nav{
+    color: var(--whiteColor);
+    width: 100vw;
+    height: 3em;
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    padding: 0 2em;
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+     
+}
+
+#logo {
+    fill: white;
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: auto;
+   
+    
+}
+a{
+    text-decoration: none;
+    color: var(--whiteColor);
+    font-weight: bold;
+}
+a:hover{
+    border-bottom: 0.15em solid var(--whiteColor);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1.5em 0;
+}
+.input{
+    height: 2.5em;
+    width: 14em;
+    padding-left: 1em;
+    background-color: var(--whiteColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+input{
+    
+    margin-left: 0;
+    height: 3em;
+    margin-left: 0em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    
+}
+/* .fa-magnifying-glass{
+    background-color: red;
+} */
+.wrapper-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+ 
+}
+.container{
+    background-color: var(--whiteColor);
+    padding: 1em;
+    border-top: 0.3em solid var(--primaryColor);
+    border-radius: var(--borderRadius);
+    -webkit-border-radius: var(--borderRadius);
+    -moz-border-radius: var(--borderRadius);
+    -ms-border-radius: var(--borderRadius);
+    -o-border-radius: var(--borderRadius);
+}
+/*Media query */
+
+@media screen and (max-width: 550px) {
+    body {
+        --fontSize: 12px; 
+       
+    }
+    .wrappeAll{
+        margin: 0 0.5em;
+    }
+  
+    .wrapper-grid{
+      grid-template-columns: 1fr;
+      gap: 0.5em;
+    }
+  
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: stretch;
+      margin-bottom: 1.5em;
+  
+    }
+    
+    h1 {
+        margin: 0.5em 0;
+      }
+  
+      .input {
+        width: 100%;
+      }
+  }
+  
